@@ -4,5 +4,6 @@ print("AIMS GHANA")
 print("Hello Ghana")
 print("Good program")
 print("Happy")
+print("mathematics")
 
 
