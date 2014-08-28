@@ -5,6 +5,4 @@ print("Hello Ghana")
 print("Good program")
 print("Happy")
 print("mathematics")
-
-
 print("even more changes2")
