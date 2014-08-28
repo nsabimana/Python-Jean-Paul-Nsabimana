@@ -1,3 +1,3 @@
 __author__ = 'jean'
 print("Hello AIMS GHANA")
-print("Thanks Lord")
+print("Thanks Lord!")
