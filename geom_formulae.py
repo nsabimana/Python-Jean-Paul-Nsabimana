@@ -5,7 +5,7 @@ __author__ = 'jean'
 from numpy import *
 
 
-def triangle_area(side1 : number, side2: number, side3: number) -> number:
+def triangle_area(side1: number, side2: number, side3: number) -> number:
     """
 
     :param side1: length of first side of a triangle
@@ -18,7 +18,7 @@ def triangle_area(side1 : number, side2: number, side3: number) -> number:
     s = (side1+side2+side3)/2
     area = sqrt(s*(s-side1)*(s-side2)*(s-side3))
     return area
-
+triangle_area(3, 4, 5)
 if __name__ == "__main__":
     side1 = 3
     side2 = 4
@@ -37,12 +37,11 @@ def circle_circumference(radius : number) ->number:
     """
     circumference = 2*radius*pi
     return circumference
-#circle_circumference(5)
+circle_circumference(5)
 
 if __name__ == '__main__':
     radius = 5
-    print(" The circumference of circleis =", circle_circumference(radius), "units of length")
-
+    print(" The circumference of circle is =", circle_circumference(radius), "units of length")
 
 
 #.....circle_area with radius r
@@ -61,13 +60,11 @@ def circle_area(radius : number) -> number:
 
 if __name__ == '__main__':
     radius = 5
-    print(" The area of circleis is =", circle_circumference(radius), "sq. units")
-
-
+    print(" The area of circle is =", circle_circumference(radius), "sq. units")
 
 
 # ....Rectangle_area with width  w and h height
-def rectangle_area(width, height):
+def rectangle_area(width : number, height : number) ->number:
     """
     Calculate the area of rectangle with width w and height h
     :param width: the length of width
@@ -87,27 +84,31 @@ if __name__ == '__main__':
     print(" The area of rectangle is =", rectangle_area(width, height), "sq. units")
 
 
-
 #....trapezoid_area with large base b, small base a and vertical height
-def trapezoid_area(a, b, h):
+def trapezoid_area(small_base : number, large_base : number, height : number) ->number:
     """
     Calculate the area of trapezoid_area with large base , small base  and vertical height
-    :param a: length of small base
-    :param b: length of large base
-    :param h: length of vertical height at a right angle to large base
+    :param small_base: length of small base
+    :param large_base: length of large base
+    :param height: length of vertical height at a right angle to large base
     :return:area
     >>>trapezoid_area(4,6,3)
     15.0
     """
-    area = (((a+b)/2)*h)
-    print("The area of trapezoid is =", area, "sq. units")
+    area = (((small_base+large_base)/2)*height)
     return area
 trapezoid_area(4, 6, 3)
+
+if __name__ == "__main__":
+    small_base = 4
+    large_base = 6
+    height = 3
+    print("The area of trapezoid is =", trapezoid_area(small_base, large_base, height), "sq. units")
 
 
 #....parallelogram_area with base b and height h at a right angle to b.
 
-def parallelogram_area(base, height):
+def parallelogram_area(base,height):
     """
     Calculate the are of parallelogram with base b and height h at a right angle to b.
     :param base: length of base
@@ -122,22 +123,25 @@ parallelogram_area(6, 4)
 
 
 #......the ellipse_area
-def ellipse_area(a, b):
+def ellipse_area(semi_major_axis: number, semi_minor_axis : number) -> number:
     """
-    Calculate the ellipse_area  with semi-major axis a and semi-minor axis b.
-    :param a: length of semi-major axis
-    :param b:length of semi-minor axis
+    Calculate the ellipse_area  with semi-major axis  and semi-minor axis.
+    :param semi_major_axis: length of semi-major axis
+    :param semi_minor_axis:length of semi-minor axis
     >>>ellipse_area(4,3)
     37.69
     """
-    area = pi*a*b
-    print("The area of ellipse is = ", area, "sq. units")
+    area = pi*semi_major_axis*semi_minor_axis
     return area
-ellipse_area(4,3)
+
+if __name__ == '__main__':
+    semi_major_axis = 4
+    semi_minor_axis = 3
+    print("The area of ellipse is = ", ellipse_area(semi_major_axis, semi_minor_axis), "sq. units")
 
 
 #....sphere_area with radius r
-def sphere_area(radius):
+def sphere_area(radius : number) -> number:
     """
     Calculate sphere_area with radius r
     :param radius: length of radius r
@@ -151,7 +155,7 @@ sphere_area(4)
 
 
 #...... sphere_volume with radius r
-def sphere_volume(radius):
+def sphere_volume(radius : number) -> number:
     """
     Calculate the volume of sphere with radius r
     :param radius: length of sphere radius
@@ -165,7 +169,7 @@ sphere_volume(4)
 
 
 #....cube_area with edge a
-def cube_area(edge):
+def cube_area(edge : number) -> number:
     """
     Calculate the area of cube with edge a
     :param edge: the length of any edge of the cube
@@ -179,7 +183,7 @@ cube_area(2)
 
 
 # ......cube_volume with the edge a
-def cube_volume(edge):
+def cube_volume(edge : number) -> number:
     """
     Calculate the volume of cube with edge a
     :param edge: the length of any edge of the cube
@@ -193,7 +197,7 @@ cube_volume(2)
 
 
 # ...the volume of ellipsoid with three radii
-def ellipsoid_volume(radius1: number, radius2: number, radius3: number):
+def ellipsoid_volume(radius1: number, radius2: number, radius3: number) -> number:
     """
      calculate the volume of ellipsoid with three radius
     :param radius1: length of first radius
@@ -212,7 +216,7 @@ if __name__ == '__main__':
 
 
 #.... the volume of cylinder with base radius and height
-def cylinder_volume(radius: number, height: number):
+def cylinder_volume(radius: number, height: number) -> number:
     """
     Calculate the volume of the cylinder with base radius and height
     :param radius: length of base radius
@@ -229,7 +233,7 @@ if __name__ == '__main__':
 
 
 #....The Surface area of cone with radius and height
-def cone_area(radius: number, height: number):
+def cone_area(radius: number, height: number) -> number:
     """
     Calculate the surface area of cone with the radius and height
     :param radius: length of radius
@@ -242,7 +246,7 @@ def cone_area(radius: number, height: number):
     return area
 
 
-def cone_volume(radius: number, height: number):
+def cone_volume(radius: number, height: number) -> number:
     """
     Calculate the volume of cone with the radius and height
     :param radius: length of cone radius
@@ -251,13 +255,11 @@ def cone_volume(radius: number, height: number):
     16.75
     """
     return 1/3*(pi*radius*radius*height)
-if __name__ == '__main__':
-    radius = 2
-    height = 4
-    print("The volume of cone is =", cone_volume(radius,height), "volume units")
-
 
 if __name__ == '__main__':
     radius = 2
     height = 4
-    print("The area of cone is =", cone_area(radius,height), " square units")
+    print("The volume of cone is =",
+          cone_volume(radius,height), "volume units")
+    print("The area of cone is =",
+          cone_area(radius,height), " square units")
